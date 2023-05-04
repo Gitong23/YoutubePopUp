@@ -1,0 +1,45 @@
+
+
+.youtube-link{
+    cursor: pointer;
+}
+
+.youtube-link:hover{
+    background-color: yellow;
+}
+
+.youtube-link.hover{
+    background-color: red;
+}
+
+.youtube-player-overlay{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+    z-index: 100;
+}
+
+.youtube-player-overlay.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.youtube-player-popup{
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    transition: all 400ms ease;
+}
+
+.youtube-player-overlay.active .youtube-player-popup{
+    transform: translate(-50%, 20%);
+}
+
+.youtube-player-popup iframe{
+    width:  100%;
+    aspect-ratio: 16/9;
+}
